@@ -108,7 +108,6 @@ def index(request):
 
     if 'samlUserdata' in request.session:
         paint_logout = True
-        print(request.session['samlUserdata'])
         if len(request.session['samlUserdata']) > 0:
             attributes = request.session['samlUserdata'].items()
     return render(request, 'index.html', {'errors': errors, 'error_reason': error_reason, 'not_auth_warn': not_auth_warn, 'success_slo': success_slo,
